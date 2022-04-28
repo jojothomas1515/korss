@@ -1,123 +1,124 @@
 * {
-  box-sizing: border-box;
-}
+    box-sizing: border-box;
 
-.container {
-  max-width: 1100px;
-  height: 2000px;
-  padding: 40px;
-  background-color: #424242;
-  margin: auto;
+    font-size: .9rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+    ;
 
-  .btn {
-    background-color: darkblue;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    border-color: transparent;
-    transition: 200ms ease-in-out;
-
-    &:hover {
-      border-color: blue;
-      cursor: pointer;
-    }
-  }
-
-}
-
-.modal {
-
-  background-color: rgba(122, 211, 88, .5);
-  width: 100%;
-  height: 100vh;
-  top: 10px;
-  display: none;
-
-  position: fixed;
-  text-align: center;
-
-  .content {
-    background-color: white;
-    width: 400px;
-    margin: 100px auto;
-    position: relative;
-    top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    border: 1px solid #424242;
-    border-radius: 10px;
-    
-    h1{
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      font-weight: 200;
-      font-style: oblique;
-    }
-
-    &*:first-child {
-      margin-top: 200px;
-    }
-
-    .form-con div {
-
-      width: 100%;
-      outline: 1px solid #424242;
-      border-radius: 5px;
-      margin-top: 10px;
-
-      &.btn-con{
-        width: 80px;
-        margin: 10px auto;
-
-        &:hover{
-          transform: translateY(-2px);
-          > input{
-            cursor: pointer;
-          }
-        }
-      }
-
-      > input {
-        text-align: center;
-        width: 100%;
-        border: none;
-        height: 35px;
-        outline: none;
-        width: 100%;
-        font-size: 1em;
-
-
-        font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono", "Droid Sans Mono", monospace, monospace;
-
-      }
-    }
-
-    > div {
-      padding: 5px;
-    }
-
-    .close {
-      position: absolute;
-      left: 100%;
-      top: 10px;
-      color: red;
-      padding: 10px;
-      background-color: black;
-      border-radius: 7px;
-      box-shadow: 0 0 3px red;
-      transition: 100ms ease-in-out;
-      margin-left: 10px;
-
-      &:hover {
+    a {
+        text-decoration: none;
         color: white;
-        background-color: red;
-        cursor: pointer;
-        transform: translateY(-2px);
-        box-shadow: 0 0 10px black;
+    }
 
-      }
+    hr {
+        margin-top: 20px;
+    }
+}
+
+.grid {
+    display: grid;
+    place-content: center;
+    height: 95vh;
+    color: white;
+
+    .main-con {
+        background-color: #007cc3;
+        width: 500px;
+        min-height: 256px;
+        padding: 30px;
+        border-radius: 5px;
+
+
+        .content {
+            width: 400px;
+            margin: auto;
+            height: 152;
+            padding: 40px;
+
+            div {
+                display: flex;
+                margin-bottom: 10px;
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            :is(input[type='text'], input[type='password']) {
+                border-radius: 5px;
+                margin-left: 5px;
+                width: 80%;
+                border: none;
+            }
+
+            input[type='password'] {
+                margin-left: 6px;
+            }
+
+            .check {
+                width: 250px;
+                margin-left: 65px;
+                display: flex;
+                justify-content: space-between;
+
+                input[type='submit'] {
+                    color: white;
+                    background: none;
+                    outline: none;
+                    width: 50px;
+                    height: 20px;
+                    padding: 2px 8px;
+
+                    border: 1px solid white;
+                    border-radius: 2.5px;
+                    font-size: smaller;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #3f9cd2;
+                        color: #333;
+                    }
+                }
+            }
+
+            .version {
+                select {
+                    width: 150px;
+                    margin-right: 10px;
+                }
+
+                a {
+                    font-size: 11px;
+                }
+            }
+        }
 
     }
-  }
 
+    .img-con {
+        display: block;
+
+        height: 40px;
+        background-image: url(LoginBanner_white.png);
+        background-repeat: no-repeat;
+        margin-bottom: 0px;
+    }
+
+
+}
+
+#whtths {
+    display: none;
+    width: 300px;
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: white;
+    border: 1px solid orange;
+    color: black;
+    
+}
+
+.dis{
+    display: block !important;
 }

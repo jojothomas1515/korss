@@ -1,43 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8"/>
-    <title>Title</title>
-    <link href="style.css" rel="stylesheet" type="text/css"/>
-    <script defer src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+
+    <link href="style.css" rel="stylesheet">
+    <title> Zimbra Web Client </title>
 </head>
+
 <body>
-<div class="container">
-    <button class="btn">Click Me</button>
-</div>
+    <div class="grid">
 
-<section class="main">
-    <div class="flex container">
-        <div>
-            <h1> My very own blog</h1>
-            <p>
-                Yes i very own blog that i might never post
-                i might  post it 
-            </p>
+        <div class="main-con">
+            <div><span class="img-con"></span></div>
+
+            <div class="content">
+
+                <form method="post">
+                    <div>
+                        <label for=" username">Username:</label>
+                        <input name="username" type="text" />
+                    </div>
+                    <div>
+                        <label for="password">Password:</label>
+                        <input name="password" type="password" />
+                    </div>
+                    <div class="check">
+                        <span> <input type="checkbox" /> Stay signed in</span>
+                        <input type="submit" value="Sign In" />
+                    </div>
+                    <hr>
+                    <div class="version">
+                        <span>Version: </span>
+                        <span> <select id="client">
+                                <option value="preferred" selected>Default</option>
+                                <option value="advanced">Advanced (Ajax)</option>
+                                <option value="standard">Standard (HTML)</option>
+                                <option value="mobile">Mobile</option>
+                            </select>
+                            <div style="display: inline; position:relative"><a id="info-button" href=""> What's this?</a>
+                                <div id="whtths">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, necessitatibus
+                                        similique quo earum minus
+                                        doloremque beatae, illo laboriosam sunt hic officiis ipsa provident natus nam
+                                        libero voluptas doloribus eos
+                                        saepe.</p>
+                                </div>
+                            </div>
+
+                        </span>
+                    </div>
+                </form>
+            </div>
+
         </div>
-        <div></div>
-    </div>
-</section>
-
-<div class="modal" id="modal">
-    <div class="content">
-        <span class="close" id="close">&checkmark;</span>
-        <h1> Subscribe for Newsletter </h1>
-
-        <div class="form-con">
-            <form>
-                <div><input name="username" placeholder="Username" type="text"></div>
-                <div><input name="email" placeholder="Email" type='email'></div>
-                <div class="btn-con"><input class="btn" type="submit"></div>
-            </form>
-        </div>
 
     </div>
-</div>
-</body>
+
+     </body>
+
 </html>
